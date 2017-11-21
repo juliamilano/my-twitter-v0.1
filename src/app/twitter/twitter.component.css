@@ -1,0 +1,17 @@
+nav{
+  height: 50px;
+  background: lightgoldenrodyellow;
+  color: deepskyblue;
+}
+nav .menu{
+  width: 100px;
+  height: 50px;
+  padding: 20px 10px;
+  border-bottom: 2px solid deepskyblue;
+}
+
+nav .menu a{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
