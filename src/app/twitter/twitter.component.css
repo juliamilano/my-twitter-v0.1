@@ -1,6 +1,6 @@
 nav{
   height: 50px;
-  background: lightgoldenrodyellow;
+  background: #fff;
   color: deepskyblue;
 }
 nav .menu{
@@ -15,3 +15,30 @@ nav .menu a{
   font-size: 18px;
   font-weight: bold;
 }
+div.app{
+  padding-top: 10px;
+  background: lightblue;
+}
+div.profile-left{
+  display: inline-block;
+  vertical-align: top;
+  min-height: 50px;
+  width: 20%;
+  background: deepskyblue;
+}
+div.main-content-block{
+  display: inline-block;
+  vertical-align: top;
+  min-height: 50px;
+  width: 59%;
+  background: greenyellow;
+}
+
+div.advertising{
+  display: inline-block;
+  vertical-align: top;
+  min-height: 50px;
+  width: 20%;
+  background: greenyellow;
+}
+

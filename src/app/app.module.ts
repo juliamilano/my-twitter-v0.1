@@ -6,11 +6,17 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TwitterComponent } from './twitter/twitter.component';
+import { ProfileLeftComponent } from './profile-left/profile-left.component';
+import { MainContentBlockComponent } from './main-content-block/main-content-block.component';
+import { AdvertisingComponent } from './advertising/advertising.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TwitterComponent
+    TwitterComponent,
+    ProfileLeftComponent,
+    MainContentBlockComponent,
+    AdvertisingComponent
   ],
   imports: [
     FormsModule,
