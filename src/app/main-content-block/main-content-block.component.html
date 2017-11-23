@@ -1,7 +1,9 @@
 <div class="block-input-top">
-  <img src="https://maxcdn.icons8.com/Share/icon/Messaging//kiss1600.png" width="60" alt="1">
-  <input type="text" class="form-control">
-  <button class="btn btn-primary">Add tweet</button>
+  <div class="avatar-icon">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkdMZ2wQnkJTGTlk8PX8zg-OQENGxky2KgWKNYeblAq3GI5Uwm" width="60" alt="1">
+  </div>
+  <input type="text" class="form-control" [(ngModel)]="textUserEnter">
+  <button class="btn btn-primary" (click)="addTweets()">Add tweet</button>
 </div>
 
 <div class="block-tweets">

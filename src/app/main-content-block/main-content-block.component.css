@@ -1,11 +1,24 @@
 .block-input-top{
-  background: pink;
+  background: deepskyblue;
   height: 80px;
+  padding: 10px 30px;
 }
 .block-input-top input{
   display: inline-block;
-  width: 300px;
+  width: 70%;
 }
 .block-tweets{
   min-height: 300px;
+}
+.avatar-icon{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+.avatar-icon img{
+  margin-top: -15px;
 }

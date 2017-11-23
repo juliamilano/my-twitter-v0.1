@@ -1,7 +1,22 @@
 .main{
+  position: relative;
+  padding: 20px 0;
+  padding-left: 100px;
   min-height: 80px;
   border: 1px rgba(0,0,0,0.1) solid;
 }
+.avatar{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: grey;
+  border-radius: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 .main .name-user{
   font-weight: bold;
 }
@@ -11,4 +26,7 @@
 }
 .user-text-content{
 
+}
+.user-add-file{
+  text-align: center;
 }

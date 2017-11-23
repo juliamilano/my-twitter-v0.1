@@ -4,16 +4,31 @@ nav{
   color: deepskyblue;
 }
 nav .menu{
-  width: 100px;
-  height: 50px;
+  height:50px;
   padding: 20px 10px;
   border-bottom: 2px solid deepskyblue;
 }
-
-nav .menu a{
+nav .menu ul{
+  margin: 0;
+  padding: 0;
+}
+nav .menu ul li{
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+}
+nav .menu ul li a{
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
+  color: deepskyblue;
+}
+nav .menu ul li .material-icons{
+  cursor: default;
+}
+nav .menu ul li a:hover{
+  color: darkcyan;
 }
 div.app{
   padding-top: 10px;
