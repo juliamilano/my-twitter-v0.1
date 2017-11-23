@@ -9,6 +9,7 @@ import { TwitterComponent } from './twitter/twitter.component';
 import { ProfileLeftComponent } from './profile-left/profile-left.component';
 import { MainContentBlockComponent } from './main-content-block/main-content-block.component';
 import { AdvertisingComponent } from './advertising/advertising.component';
+import { TweetComponent } from './main-content-block/tweet/tweet.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AdvertisingComponent } from './advertising/advertising.component';
     TwitterComponent,
     ProfileLeftComponent,
     MainContentBlockComponent,
-    AdvertisingComponent
+    AdvertisingComponent,
+    TweetComponent
   ],
   imports: [
     FormsModule,

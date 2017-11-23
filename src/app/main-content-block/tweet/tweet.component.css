@@ -1,0 +1,14 @@
+.main{
+  min-height: 80px;
+  border: 1px rgba(0,0,0,0.1) solid;
+}
+.main .name-user{
+  font-weight: bold;
+}
+.main span{
+  padding: 0 10px;
+  font-size: 12px;
+}
+.user-text-content{
+
+}
