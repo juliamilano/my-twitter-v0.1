@@ -1,0 +1,44 @@
+.block-top-empty{
+  height: 120px;
+  position: relative;
+}
+.block-image-profile{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: deepskyblue;
+  text-align: center;
+  position: absolute;
+  top: 85px;
+  left: 20px;
+}
+.info-profile-block{
+  background: #fff;
+  width: 100%;
+  height: 120px;
+
+}
+.name-info{
+  font-size: 12px;
+  padding-left: 40%;
+  padding-top: 10px;
+}
+.name-info p,
+.info-count p{
+  margin: 0;
+}
+.info-count{
+  padding-left: 10%;
+  margin-top: 15px;
+}
+.count-number{
+  font-size: 20px;
+  color: deepskyblue;
+  font-weight: bold;
+  padding-left: 8%;
+}

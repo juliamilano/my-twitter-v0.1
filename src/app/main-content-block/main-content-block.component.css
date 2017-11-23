@@ -1,0 +1,11 @@
+.block-input-top{
+  background: pink;
+  height: 80px;
+}
+.block-input-top input{
+  display: inline-block;
+  width: 300px;
+}
+.block-tweets{
+  min-height: 300px;
+}

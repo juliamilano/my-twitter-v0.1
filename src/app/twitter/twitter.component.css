@@ -18,6 +18,7 @@ nav .menu a{
 div.app{
   padding-top: 10px;
   background: lightblue;
+  min-height: 100vh;
 }
 div.profile-left{
   display: inline-block;
@@ -29,16 +30,15 @@ div.profile-left{
 div.main-content-block{
   display: inline-block;
   vertical-align: top;
-  min-height: 50px;
+  min-height: 100px;
   width: 59%;
-  background: greenyellow;
+  background: #fff;
 }
 
 div.advertising{
   display: inline-block;
   vertical-align: top;
-  min-height: 50px;
+  min-height: 100px;
   width: 20%;
-  background: greenyellow;
 }
 
