@@ -1,0 +1,20 @@
+import { NgModule } from '@angular/core'
+import { RouterModule, Routes } from '@angular/router';
+
+
+import { HomeAppComponent } from './home-app/home-app.component';
+import { ConnectAppComponent } from './connect-app/connect-app.component';
+import { DiscoverAppComponent } from './discover-app/discover-app.component';
+
+const routes: Routes = [
+  { path: 'home-app', component: HomeAppComponent },
+  { path: 'connect-app', component: ConnectAppComponent },
+  { path: 'discover-app', component: DiscoverAppComponent },
+  { path: '', redirectTo: '/home-app', pathMatch: 'full' }
+];
+
+@NgModule({
+  exports: [ RouterModule ],
+  imports: [ RouterModule.forRoot(routes) ]
+})
+export class AppRoutingModule {}

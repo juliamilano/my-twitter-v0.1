@@ -1,0 +1,35 @@
+div.app{
+  padding-top: 10px;
+  background: lightblue;
+  min-height: 100vh;
+}
+div.profile-left{
+  display: inline-block;
+  vertical-align: top;
+  min-height: 50px;
+  width: 20%;
+  background: deepskyblue;
+  border-radius: 15px;
+}
+div.main-content-block{
+  display: inline-block;
+  vertical-align: top;
+  min-height: 100px;
+  width: 59%;
+  background: #fff;
+  border-radius: 15px;
+}
+
+div.advertising{
+  display: inline-block;
+  vertical-align: top;
+  min-height: 100px;
+  width: 20%;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width : 992px){
+  div.advertising{
+    width: 17%;
+  }
+}

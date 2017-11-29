@@ -2,19 +2,14 @@
   <div class="menu">
     <ul>
       <li><i class="material-icons md-dark">home</i></li>
-      <li><a href="#">Home</a></li>
+      <li><a href="#" routerLink="/home-app">Home</a></li>
+      <li><i class="material-icons" >account_balance</i></li>
+      <li><a href="#" routerLink="/connect-app">Connect</a></li>
+      <li><i class="material-icons">account_balance</i></li>
+      <li><a href="#" routerLink="/discover-app">Discover</a></li>
+      <li class="logo-center"><a href="#" routerLink="/discover-app"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
     </ul>
   </div>
 </nav>
 
-<div class="app">
-  <div class="profile-left">
-    <app-profile-left></app-profile-left>
-  </div>
-  <div class="main-content-block">
-    <app-main-content-block></app-main-content-block>
-  </div>
-  <div class="advertising">
-    <app-advertising></app-advertising>
-  </div>
-</div>
+<router-outlet></router-outlet>

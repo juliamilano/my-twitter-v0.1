@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-left.component.css']
 })
 export class ProfileLeftComponent implements OnInit {
-
+  oountTweets = 0;
   constructor() { }
 
   ngOnInit() {

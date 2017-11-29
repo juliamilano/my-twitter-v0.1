@@ -1,0 +1,86 @@
+.main{
+  position: relative;
+  padding: 20px 0;
+  padding-left: 100px;
+  min-height: 80px;
+  border: 1px rgba(0,0,0,0.1) solid;
+}
+.avatar{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: grey;
+  border-radius: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main .name-user{
+  font-weight: bold;
+}
+.main span{
+  padding: 0 10px;
+  font-size: 12px;
+}
+.user-text-content{
+  max-width: 90%;
+  margin-bottom: 20px;
+}
+.user-add-file{
+  text-align: center;
+}
+.btn-delete{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 40%;
+  font-size: 12px;
+  top: 15px;
+  right: 15px;
+  padding: 0;
+  opacity: 0.5;
+  background: #fff;
+}
+.btn-delete i{
+  font-size: 22px;
+}
+.btn-delete:hover{
+  opacity: 1;
+}
+
+@media only screen and (max-width : 992px){
+  .user-add-file img{
+    -display: none;
+    max-width: 300px;
+    box-sizing: border-box;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .main{
+    padding: 5px 0 20px 0;
+    padding-left: 70px;
+  }
+  .btn-delete {
+    width: 20px;
+    height: 20px;
+  }
+  .btn-delete i{
+    font-size: 16px;
+  }
+
+}
+
+@media only screen and (max-width : 768px) {
+  .user-add-file img{
+    max-width: 230px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .user-add-file img{
+    max-width: 150px;
+  }
+}

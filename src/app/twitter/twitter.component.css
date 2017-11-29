@@ -1,11 +1,12 @@
 nav{
   height: 50px;
-  background: #fff;
+  background: rgba(19,19,19,1);
+  background: linear-gradient(to bottom, rgba(19,19,19,1) 0%, rgba(17,17,17,1) 15%, rgba(28,28,28,1) 41%, rgba(71,71,71,1) 73%, rgba(89,89,89,1) 99%, rgba(76,76,76,1) 100%);
   color: deepskyblue;
 }
 nav .menu{
   height:50px;
-  padding: 20px 10px;
+  padding: 15px 10px;
   border-bottom: 2px solid deepskyblue;
 }
 nav .menu ul{
@@ -17,6 +18,10 @@ nav .menu ul li{
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
+  margin-right: 10px;
+}
+nav .menu ul li:nth-child(even){
+  margin-right: 30px;
 }
 nav .menu ul li a{
   text-decoration: none;
@@ -30,30 +35,12 @@ nav .menu ul li .material-icons{
 nav .menu ul li a:hover{
   color: darkcyan;
 }
-div.app{
-  padding-top: 10px;
-  background: lightblue;
-  min-height: 100vh;
-}
-div.profile-left{
-  display: inline-block;
-  vertical-align: top;
-  min-height: 50px;
-  width: 20%;
-  background: deepskyblue;
-}
-div.main-content-block{
-  display: inline-block;
-  vertical-align: top;
-  min-height: 100px;
-  width: 59%;
-  background: #fff;
-}
 
-div.advertising{
-  display: inline-block;
-  vertical-align: top;
-  min-height: 100px;
-  width: 20%;
-}
+.logo-center{
+  width: 30%;
+  text-align: center;
 
+}
+.logo-center a i {
+  font-size: 25px;
+}

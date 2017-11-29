@@ -1,7 +1,9 @@
 .block-input-top{
   background: deepskyblue;
-  height: 80px;
+  min-height: 80px;
   padding: 10px 30px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 .block-input-top input{
   display: inline-block;
@@ -9,6 +11,8 @@
 }
 .block-tweets{
   min-height: 300px;
+  padding: 0;
+  magrin: 0;
 }
 .avatar-icon{
   display: inline-block;
@@ -21,4 +25,16 @@
 }
 .avatar-icon img{
   margin-top: -15px;
+}
+
+@media only screen and (max-width : 992px){
+  .avatar-icon,
+  .block-input-top input{
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .block-input-top{
+    text-align: center;
+  }
 }
