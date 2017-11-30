@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tweet } from '../../tweetstype';
+import { TweetService } from '../../twitter.service';
 
 @Component({
   selector: 'app-profile-left',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-left.component.css']
 })
 export class ProfileLeftComponent implements OnInit {
-  oountTweets = 0;
-  constructor() { }
+  countTweets: number;
+  nameUser: string;
 
-  ngOnInit() {
+  linkUser: string;
+
+  tweets: Tweet[];
+
+  constructor(private tweemService: TweetService) {}
+
+   ngOnInit() {
+    this.tweemService.getTweets()
+      .then(tweets => this.countTweets = tweets.length);
   }
 
 }

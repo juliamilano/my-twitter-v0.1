@@ -16,7 +16,7 @@ export class TweetComponent implements OnInit {
 
   getTweets(): void {
     this.tweetService.getTweets()
-      .subscribe(tweet => this.tweets = tweet);
+      .then(tweet => this.tweets = tweet);
   }
 
   ngOnInit() {

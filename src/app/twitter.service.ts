@@ -23,7 +23,7 @@ export class TweetService {
 
   //через промисы получение
 
- /*getTweets(): Promise<Tweet[]> {
+  getTweets(): Promise<Tweet[]> {
     return this.http.get<Tweet[]>(this.tweetsUrl).toPromise()
       .then(data => {
         console.log(data);
@@ -32,12 +32,12 @@ export class TweetService {
         console.log(error);
         return [];
       });
-  }*/
+  }
 
-  //через Observable получение
+  /*//через Observable получение
   getTweets(): Observable<Tweet[]> {
     return this.http.get<Tweet[]>(this.tweetsUrl);
-  }
+  }*/
 
 //через-промисы-добавление
   addTweet(tweet: Tweet): Promise<Tweet> {
