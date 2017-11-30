@@ -1,12 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { Tweet } from '../../tweetstype';
-import { TweetService } from '../../twitter.service';
-
+import { Component, OnInit , OnChanges} from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Tweet } from '../../Class-types/tweetstype';
+import { TweetService } from '../../Services/twitter.service';
+import { UserInfoService } from '../../Services/user-info.service';
 
 
 @Component({
   selector: 'app-main-content-block',
   templateUrl: './main-content-block.component.html',
+  /*animations: [
+    trigger('visibilityChanged', [
+      state('shown' , style({ opacity: 1 })),
+      state('hidden', style({ opacity: 0 })),
+      transition('hidden => shown', animate('1500ms ease-in'))
+    ])
+  ],*/
   styleUrls: ['./main-content-block.component.css']
 })
 
@@ -16,48 +24,29 @@ export class MainContentBlockComponent implements OnInit {
 
   tweets: Tweet[];
 
-  constructor(private tweetService: TweetService) { }
+  viewP: Boolean = true;
+  //visibility: string = 'shown';
 
-  createNewTweet(text: string): Tweet{
-    let getRandomArbitary = (min: number, max: number) => {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    };
-    let result = getRandomArbitary(20, 120);
-    console.log(result);
+  //ngOnChanges() {
+  //  this.visibility = this.viewP ? 'shown' : 'hidden';
+  //}
 
-    let usertweet = {
-      id: result,
-      name: 'User Name',
-      link: "@user_name",
-      time: "0h01m",
-      text: text,
-      image: '',
-      width: 200,
-      alt: '',
-      imgAvatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkdMZ2wQnkJTGTlk8PX8zg-OQENGxky2KgWKNYeblAq3GI5Uwm',
-      imgAvatarWidth: 60,
-      imgAvatarAlt: 'user-name'
-    };
-    return usertweet;
-  }
-
-//метод получения героев через промисы
+  constructor(private tweetService: TweetService, private userInfoService: UserInfoService) { }
    getTweets(): void {
     this.tweetService.getTweets()
-      .then(data => this.tweets = data);
+      .then(data => this.tweets = data.sort(function(a, b){
+          if(a.id < b.id){
+            return 1;
+          }
+          if(a.id > b.id){
+            return 0;
+          }
+          return 0;
+        }));
   }
 
-  //метод получения героев через observable
-
-  /*  getTweets(): void {
-      this.tweetService.getTweets()
-        .subscribe(tweet => this.tweets = tweet);
-    }*/
-
-  // метод добавление через промисы
-
     addTweet(): void {
-      let createdTweet = this.createNewTweet(this.textUserEnter);
+      let createdTweet = this.userInfoService.createNewTweet(this.textUserEnter);
       this.tweetService.addTweet(createdTweet).then((tweet) => {
         this.tweets.unshift(createdTweet);
       });
@@ -66,17 +55,20 @@ export class MainContentBlockComponent implements OnInit {
     addTweetEnter(event: KeyboardEvent){
       this.addTweet();
     }
-  //  метод добавление через observable
-  /*addTweet(text: string): void {
-    let createdTweet = this.createNewTweet(this.textUserEnter);
-    this.tweetService.addTweet(createdTweet).subscribe(tweet => {
-      this.tweets.unshift(createdTweet);
-      });
-  }
-*/
+
+    onFocus(){
+      this.viewP = false;
+    }
+    onBlur(){
+      setTimeout(()=>{
+        this.viewP = true;
+      } , 1000)
+    }
 
     ngOnInit() {
       this.getTweets();
     }
+
+
 
 }

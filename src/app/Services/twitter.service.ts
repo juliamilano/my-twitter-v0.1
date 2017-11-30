@@ -7,8 +7,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Tweet } from './tweetstype';
-
+import { Tweet } from '../Class-types/tweetstype';
+import { UserInfoService } from './user-info.service';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -19,10 +19,7 @@ export class TweetService {
 
   private tweetsUrl = 'api/tweets';
 
-  constructor(private http: HttpClient) {}
-
-  //через промисы получение
-
+  constructor(private http: HttpClient, private userInfoService: UserInfoService) {}
   getTweets(): Promise<Tweet[]> {
     return this.http.get<Tweet[]>(this.tweetsUrl).toPromise()
       .then(data => {
@@ -34,36 +31,15 @@ export class TweetService {
       });
   }
 
-  /*//через Observable получение
-  getTweets(): Observable<Tweet[]> {
-    return this.http.get<Tweet[]>(this.tweetsUrl);
-  }*/
-
-//через-промисы-добавление
   addTweet(tweet: Tweet): Promise<Tweet> {
     return this.http.post<Tweet>(this.tweetsUrl, tweet, httpOptions).toPromise();
 }
-
-// через observable добавление
- /* addTweet(tweet: Tweet): Observable<Tweet> {
-    return this.http.post<Tweet>(this.tweetsUrl, tweet, httpOptions).pipe(
-     // catchError(this.handleError<Tweet>('addHero'))
-    );
-  }*/
-
- //удаление Observable
 
   delete(tweet: Tweet | number): Promise<Tweet> {
     const id = typeof tweet === 'number' ? tweet : tweet.id;
     const url = `${this.tweetsUrl}/${id}`;
 
     return this.http.delete<Tweet>(url, httpOptions).toPromise();
-
-   //const id = typeof tweet === 'number' ? hero : hero.id;
-  //  return this.http.delete<Tweet>('${this.tweetsUrl} + ${id}', httpOptions).toPromise();
-  //  console.log(tweet);
-    //return this.http.put(this.tweetsUrl, tweet, httpOptions);
-  //  return this.http.post<Tweet>(this.tweetsUrl, tweet, httpOptions).toPromise();
   }
 
 

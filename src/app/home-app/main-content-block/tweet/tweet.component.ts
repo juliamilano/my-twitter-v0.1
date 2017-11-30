@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Tweet } from '../../../tweetstype';
-import { TweetService } from '../../../twitter.service';
+import { Tweet } from '../../../Class-types/tweetstype';
+import { TweetService } from '../../../Services/twitter.service';
+
 
 @Component({
   selector: 'app-tweet',

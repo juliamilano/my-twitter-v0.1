@@ -4,11 +4,30 @@
   padding: 10px 30px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  position: relative;
 }
 .block-input-top input{
   display: inline-block;
-  width: 70%;
+  width: 30%;
+  margin-left: 40%;
+  z-index: 1;
 }
+
+.block-input-top input:focus{
+  width: 70%;
+  margin-left: 0%;
+  outline: 2px solid royalblue;
+  transition: margin-left 0.5s ease,
+              width 1s ease;
+}
+
+.block-input-top input:not(:focus){
+  width: 30%;
+  margin-left: 40%;
+  transition: margin-left 1s ease,
+              width 0.5s ease;
+}
+
 .block-tweets{
   min-height: 300px;
   padding: 0;
@@ -26,6 +45,27 @@
 .avatar-icon img{
   margin-top: -15px;
 }
+.question{
+  position: absolute;
+  top: 38%;
+  left: 18%;
+  color: #fff;
+  font-size: 12px;
+  font-style: italic;
+  z-index: 0;
+}
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-moz-placeholder,
+input:-ms-input-placeholder{
+  color: transparent;
+}
+input:focus::-webkit-input-placeholder,
+input:focus::-moz-placeholder,
+input:focus:-moz-placeholder,
+input:focus:-ms-input-placeholder{
+  color: transparent;
+}
 
 @media only screen and (max-width : 992px){
   .avatar-icon,
@@ -36,5 +76,52 @@
   }
   .block-input-top{
     text-align: center;
+  }
+
+  .block-input-top input{
+    display: inline-block;
+    width: 40%;
+    margin-left: 0%;
+  }
+
+  .block-input-top input:focus{
+    margin-left: 0%;
+  }
+  .block-input-top input:not(:focus){
+    margin-left: 0%;
+  }
+  .btn-primary{
+    margin-left: 0;
+  }
+
+}
+@media only screen and (max-width : 1180px){
+  /*.btn-primary{
+    margin-left: 45%;
+  }*/
+
+  .question{
+    display: none;
+  }
+  input::-webkit-input-placeholder,
+  input::-moz-placeholder,
+  input:-moz-placeholder,
+  input:-ms-input-placeholder{
+    color: grey;
+  }
+
+  .block-input-top input{
+    display: inline-block;
+    width: 40%;
+    margin-left: 17%;
+  }
+
+  .block-input-top input:focus{
+    width: 75%;
+    margin-left: 0%;
+  }
+  .block-input-top input:not(:focus){
+    width: 40%;
+    margin-left: 17%;
   }
 }

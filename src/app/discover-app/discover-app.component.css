@@ -1,5 +1,26 @@
-body{
-  padding-top: 10px;
-  background: lightblue;
+.app{
+  width: 100%;
   min-height: 100vh;
+  background: #fff;
+}
+.nav-bar{
+  min-height: 100px;
+  width: 100%;
+  background: #02D6E7;
+}
+.top-users-list{
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  min-height: 100vh;
+  background: grey;
+  padding: 0;
+}
+.content-block{
+  display: inline-block;
+  vertical-align: top;
+  width: 69%;
+  min-height: 100vh;
+  background: #fff;
+  padding: 50px;
 }

@@ -2,7 +2,19 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const tweets = [
+    const tweets = [{
+        id: 5,
+        name: "Enricke Gia",
+        link: "@gia-gia",
+        time: "1h22m",
+        text: "onec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. ",
+        image: "assets/img/photo-bridge.jpg",
+        width: 400,
+        alt: "1",
+        imgAvatar: "https://www.w3schools.com/w3images/avatar2.png",
+        imgAvatarWidth: 60,
+        imgAvatarAlt: "Enricke Gia"
+      },
       { id: 12,
         name: "Andy Ford",
         link: "@andy-ford",

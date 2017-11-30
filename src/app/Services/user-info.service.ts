@@ -1,23 +1,34 @@
 import { Injectable } from '@angular/core';
-import { Tweet } from './tweetstype';
+import { Tweet } from '../Class-types/tweetstype';
+import { DatePipe } from '@angular/common';
 
 @Injectable()
 export class UserInfoService {
 
   constructor() { }
 
+  userName = "Nicolas Piu";
+  userNameLink = `${this.userName.split(' ').join('').toLowerCase()}`;
+
+  //userTweettime = `${ this.today | date:'shortTime'}`;
+
+  //usertweetInfo: Tweet;
+
   createNewTweet(text: string): Tweet{
+    let today = new Date();
+    let userTweettime = `${today.getHours()}h${today.getMinutes()}m`;
+
     let getRandomArbitary = (min: number, max: number) => {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     };
-    let result = getRandomArbitary(20, 120);
+    let result = getRandomArbitary(15, 150);
     console.log(result);
 
     let usertweet = {
       id: result,
-      name: 'User Name',
-      link: "@user_name",
-      time: "0h01m",
+      name: `${this.userName}`,
+      link: `@${this.userNameLink}`,
+      time: `${userTweettime}`,
       text: text,
       image: '',
       width: 200,
@@ -26,6 +37,8 @@ export class UserInfoService {
       imgAvatarWidth: 60,
       imgAvatarAlt: 'user-name'
     };
+
     return usertweet;
   }
+
 }

@@ -1,11 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './Services/in-memory-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,7 +25,10 @@ import { DiscoverAppComponent } from './discover-app/discover-app.component';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
-import { TweetService } from './twitter.service';
+import { TweetService } from './Services/twitter.service';
+import { UserInfoService } from './Services/user-info.service';
+import { TopUsersComponent } from './connect-app/top-users/top-users.component';
+import { HoverDirective } from './Directives/hover.directive';
 
 @NgModule({
   declarations: [
@@ -33,11 +40,15 @@ import { TweetService } from './twitter.service';
     TweetComponent,
     HomeAppComponent,
     ConnectAppComponent,
-    DiscoverAppComponent
+    DiscoverAppComponent,
+    TopUsersComponent,
+    HoverDirective
   ],
   imports: [
     FormsModule,
     BrowserModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
     HttpModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
@@ -46,7 +57,7 @@ import { TweetService } from './twitter.service';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
-  providers: [TweetService],
+  providers: [TweetService, UserInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

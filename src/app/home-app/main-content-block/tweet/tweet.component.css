@@ -39,7 +39,7 @@
   font-size: 12px;
   top: 15px;
   right: 15px;
-  padding: 0;
+  padding: 7px 0 0 0;
   opacity: 0.5;
   background: #fff;
 }
@@ -48,6 +48,9 @@
 }
 .btn-delete:hover{
   opacity: 1;
+}
+.btn-delete:focus{
+  outline: none;
 }
 
 @media only screen and (max-width : 992px){
