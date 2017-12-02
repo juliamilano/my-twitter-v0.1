@@ -29,6 +29,8 @@ import { TweetService } from './Services/twitter.service';
 import { UserInfoService } from './Services/user-info.service';
 import { TopUsersComponent } from './connect-app/top-users/top-users.component';
 import { HoverDirective } from './Directives/hover.directive';
+import { Article1Component } from './connect-app/users-article/article-1/article-1.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { HoverDirective } from './Directives/hover.directive';
     ConnectAppComponent,
     DiscoverAppComponent,
     TopUsersComponent,
-    HoverDirective
+    HoverDirective,
+    Article1Component,
+    PageNotFoundComponent
   ],
   imports: [
     FormsModule,

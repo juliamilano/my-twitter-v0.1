@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Router , ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-top-users',
@@ -8,9 +9,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TopUsersComponent implements OnInit {
   @Input() topUserInfo: {};
 
-  constructor() { }
 
   ngOnInit() {
   }
 
+  constructor(private router: Router,
+              private route: ActivatedRoute) { }
+
+  openCarsPage() {
+    //  this.router.navigate(['connect-app'], (relativeTo: this.route));
+  }
 }

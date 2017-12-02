@@ -46,12 +46,16 @@ export class MainContentBlockComponent implements OnInit {
   }
 
     addTweet(): void {
+    if ( this.textUserEnter.length !== 0 && (/\s{2,}/.test(this.textUserEnter)!== true)) {
       let createdTweet = this.userInfoService.createNewTweet(this.textUserEnter);
-      this.tweetService.addTweet(createdTweet).then((tweet) => {
-        this.tweets.unshift(createdTweet);
-      });
-      this.textUserEnter = '';
+        this.tweetService.addTweet(createdTweet).then((tweet) => {
+          this.tweets.unshift(createdTweet);
+        });
+        this.textUserEnter = '';
+      }
     }
+
+
     addTweetEnter(event: KeyboardEvent){
       this.addTweet();
     }

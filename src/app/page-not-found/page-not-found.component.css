@@ -1,0 +1,12 @@
+.app{
+  width: 100%;
+  min-height: 100vh;
+  background: #ADD8E6;
+  text-align: center;
+}
+p{
+  color: red;
+  font-weight: bold;
+  font-size: 50px;
+  padding: 50px;
+}

@@ -44,3 +44,7 @@ nav .menu ul li a:hover{
 .logo-center a i {
   font-size: 25px;
 }
+
+.active{
+  color: #fff !important;
+}

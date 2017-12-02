@@ -1,5 +1,7 @@
 <div class="top-user-list-item" hoverDirective>
 <div class="img-avatar"><img src="" alt=""></div>
-  <p class='name'>{{topUserInfo.name}}</p>
+  <a href="#" routerLinkActive="active" [routerLink]="['/connect-app', topUserInfo.id]" [queryParams]="{name: topUserInfo.name}">
+    <p class='name'>{{topUserInfo.name}}</p>
+  </a>
   <p class="number">{{topUserInfo.topNumber}}</p>
 </div>

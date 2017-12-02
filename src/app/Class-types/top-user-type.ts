@@ -4,5 +4,6 @@ export class TopUser {
   imgLink: string;
   ingSize: number;
   topNumber: number;
+  link: string;
   textContent: string;
 }
