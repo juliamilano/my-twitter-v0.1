@@ -56,3 +56,27 @@
     padding-left: 0%;
   }
 }
+
+.info-followUsers{
+  min-height: 120px;
+  background: deepskyblue;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.info-followUsers ul{
+  margin: 0;
+  padding: 0;
+}
+.info-followUsers ul li {
+  list-style-type: none;
+  width: 100%;
+  background: blueviolet;
+}
+.info-followUsers h3{
+  text-align: center;
+  color: #fff;
+}
+.info-followUsers ul li button{
+  width: 100%;
+}
+

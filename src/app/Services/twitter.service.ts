@@ -20,6 +20,9 @@ export class TweetService {
   private tweetsUrl = 'api/tweets';
 
   constructor(private http: HttpClient, private userInfoService: UserInfoService) {}
+  tweetsFilter: Tweet[];
+  buttonUserTopSubscribe = false;
+
   getTweets(): Promise<Tweet[]> {
     return this.http.get<Tweet[]>(this.tweetsUrl).toPromise()
       .then(data => {

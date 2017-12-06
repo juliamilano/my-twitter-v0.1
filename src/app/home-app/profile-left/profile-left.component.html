@@ -3,6 +3,7 @@
     <i class="material-icons md-light">camera_enhance</i>
   </div>
 </div>
+
 <div class="info-profile-block">
   <div class="name-info">
     <p>{{nameUser}}</p>
@@ -12,4 +13,14 @@
     <p>Tweets</p>
     <p class="count-number">{{countTweets}}</p>
   </div>
+</div>
+
+<div class="info-followUsers">
+  <h3>
+    Subscriptions</h3>
+  <ul>
+     <li *ngFor="let item of followUsers">
+       <button class="btn btn-default" type="" (click)="tweetsFilterName(item.id)">{{item.name}} {{item.id}}</button>
+     </li>
+   </ul>
 </div>

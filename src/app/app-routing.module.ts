@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeAppComponent } from './home-app/home-app.component';
 import { ConnectAppComponent } from './connect-app/connect-app.component';
 import { DiscoverAppComponent } from './discover-app/discover-app.component';
-import { Article1Component } from './connect-app/users-article/article-1/article-1.component';
+import { Article1Component } from './connect-app/users-article/article/article-1.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
